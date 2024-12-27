@@ -9,7 +9,7 @@ function ProductList() {
   }, []);
   const getProducts = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:4500/products/${userid}`, {
+    let result = await fetch(`https://mern-api-zuqe.onrender.com/${userid}`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -19,7 +19,7 @@ function ProductList() {
   };
 
   const deleteproduct = async (id) => {
-    let result = await fetch(`http://localhost:4500/product/${id}`, {
+    let result = await fetch(`https://mern-api-zuqe.onrender.com/${id}`, {
       method: "Delete",
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
