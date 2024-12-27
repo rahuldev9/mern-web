@@ -30,7 +30,7 @@ function Signup() {
             return false;
         }
 
-        let result = await fetch('http://localhost:4500/register', {
+        let result = await fetch('mern-web-api-omega.vercel.app/register', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
             headers: {
