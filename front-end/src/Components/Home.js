@@ -9,7 +9,7 @@ function Home() {
     }, []);
 
     const getProducts = async () => {
-        let result = await fetch('http://localhost:4500/home', {
+        let result = await fetch('https://mern-api-zuqe.onrender.com/home', {
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
@@ -21,7 +21,7 @@ function Home() {
     const searchHandle = async (event) => {
         let key = event.target.value;
         if (key) {
-            let result = await fetch(`http://localhost:4500/search/${key}`, {
+            let result = await fetch(`https://mern-api-zuqe.onrender.com/search/${key}`, {
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
