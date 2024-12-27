@@ -70,7 +70,7 @@ function Home() {
                             <p>{index + 1}</p>
                             <img
                                 alt={item.name}
-                                src={`http://localhost:4500/${item.image}`}
+                                src={`https://mern-api-zuqe.onrender.com/${item.image}`}
                                 style={{
                                     height: '100px',
                                     width: '100px',
