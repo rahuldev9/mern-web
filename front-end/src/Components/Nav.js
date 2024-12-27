@@ -11,7 +11,7 @@ function Nav() {
     <div style={{display:'flex',background:'yellow',flexDirection:'row',justifyContent:'flex-end',alignContent:'center',alignItems:'center',position:'sticky',top:'0px'}}>
       <img alt='logo' src='favicon.ico' style={{height:'50px',width:'50px',alignSelf:'unset'}}></img>
       { auth ? <div style={{display:'flex',flexDirection:'row'}}>
-      <h4><Link to='/'>Home</Link></h4>
+      <h4><Link to='/home'>Home</Link></h4>
         <h4><Link to='/products'>Products</Link></h4>
         <h4><Link to='/add'>Add produts</Link></h4>
         {/* <h4><Link to='/update'>update products</Link></h4> */}
