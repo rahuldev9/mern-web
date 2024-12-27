@@ -5,7 +5,7 @@ function Profile() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [message, setMessage] = useState('');
   const [preview, setPreview] = useState(
-    auth && auth.profileImage ? `http://localhost:4500/${auth.profileImage}` : null
+    auth && auth.profileImage ? `https://mern-api-zuqe.onrender.com/${auth.profileImage}` : null
   );
   const [showFileInput, setShowFileInput] = useState(false);
 
@@ -33,7 +33,7 @@ function Profile() {
     formData.append('profileImage', selectedFile);
 
     try {
-      const response = await fetch(`http://localhost:4500/profile/${auth._id}`, {
+      const response = await fetch(`https://mern-api-zuqe.onrender.com/profile/${auth._id}`, {
         method: 'PUT',
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`,
