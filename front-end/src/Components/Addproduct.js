@@ -24,7 +24,7 @@ function AddProduct() {
     formData.append('userid', JSON.parse(localStorage.getItem('user'))._id);
     formData.append('image', image);
 
-    const result = await fetch('http://localhost:4500/add-product', {
+    const result = await fetch('https://mern-api-zuqe.onrender.com/add-product', {
       method: 'POST',
       body: formData,
       headers: {
