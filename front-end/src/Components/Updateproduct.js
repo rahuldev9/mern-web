@@ -16,7 +16,7 @@ function UpdateProduct() {
     }, []);
 
     const getProductDetails = async () => {
-        let result = await fetch(`http://localhost:4500/product/${params.id}`, {
+        let result = await fetch(`https://mern-api-zuqe.onrender.com/product/${params.id}`, {
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`,
             },
@@ -39,7 +39,7 @@ function UpdateProduct() {
             formData.append('image', image); // Append new image if uploaded
         }
 
-        let result = await fetch(`http://localhost:4500/product/${params.id}`, {
+        let result = await fetch(`https://mern-api-zuqe.onrender.com//product/${params.id}`, {
             method: 'PUT',
             body: formData,
             headers: {
@@ -84,7 +84,7 @@ function UpdateProduct() {
             />
             {currentImage && (
                 <img
-                    src={`http://localhost:4500/${currentImage}`}
+                    src={`https://mern-api-zuqe.onrender.com/${currentImage}`}
                     alt="Current product"
                     style={{ width: '250px', height: '250px', marginTop: '10px'}}
                 />
