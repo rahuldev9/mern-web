@@ -38,7 +38,7 @@ const path = require("path");
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(cors({
-    origin: "",
+    origin: ["https://mern-web-frontend.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],s
     credentials: true
 }));
