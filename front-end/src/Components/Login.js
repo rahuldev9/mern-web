@@ -24,7 +24,7 @@ function Login() {
     if (result.auth) {
       localStorage.setItem("user", JSON.stringify(result.user));
       localStorage.setItem("token", JSON.stringify(result.auth));
-      navigate("/");
+      navigate("/home");
     } else {
       alert("Invalid email or password");
     }
