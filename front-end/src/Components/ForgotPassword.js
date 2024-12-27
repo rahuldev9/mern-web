@@ -5,7 +5,7 @@ function ForgotPassword() {
     const [message, setMessage] = useState('');
 
     const handleForgotPassword = async () => {
-        const result = await fetch('http://localhost:4500/forgot-password', {
+        const result = await fetch('https://mern-api-zuqe.onrender.com/forgot-password', {
             method: 'POST',
             body: JSON.stringify({ email }),
             headers: { 'Content-Type': 'application/json' },
