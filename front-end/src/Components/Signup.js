@@ -30,7 +30,7 @@ function Signup() {
             return false;
         }
 
-        let result = await fetch('mern-web-api-omega.vercel.app/register', {
+        let result = await fetch('https://mern-api-zuqe.onrender.com/register', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
             headers: {
