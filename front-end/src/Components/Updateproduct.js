@@ -39,7 +39,7 @@ function UpdateProduct() {
             formData.append('image', image); // Append new image if uploaded
         }
 
-        let result = await fetch(`https://mern-api-zuqe.onrender.com//product/${params.id}`, {
+        let result = await fetch(`https://mern-api-zuqe.onrender.com/product/${params.id}`, {
             method: 'PUT',
             body: formData,
             headers: {
