@@ -5,6 +5,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [loginFailed, setLoginFailed] = useState(false); // New state variable
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -13,7 +14,7 @@ function Login() {
       return false;
     }
 
-    let result = await fetch("https://mern-api-zuqe.onrender.com/login", {
+    let result = await fetch("http://localhost:4500/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
@@ -26,7 +27,7 @@ function Login() {
       localStorage.setItem("token", JSON.stringify(result.auth));
       navigate("/home");
     } else {
-      alert("Invalid email or password");
+      setLoginFailed(true); // Set loginFailed to true
     }
   };
 
@@ -82,6 +83,17 @@ function Login() {
         <button type="button" onClick={handleLogin}>
           Sign In
         </button>
+        {loginFailed && ( // Display message if login fails
+          <span
+            style={{
+              color: "red",
+              marginTop: "10px",
+              fontSize: "14px",
+            }}
+          >
+            Login failed. Please check your email and password.
+          </span>
+        )}
         <p>
           Forgot your password?{" "}
           <Link to="/forgot-password" style={{ textDecoration: "none" }}>
