@@ -14,7 +14,7 @@ function Login() {
       return false;
     }
 
-    let result = await fetch("http://localhost:4500/login", {
+    let result = await fetch("https://mern-api-zuqe.onrender.com/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
